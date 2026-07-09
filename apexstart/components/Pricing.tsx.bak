@@ -1,0 +1,225 @@
+﻿"use client";
+import { Check, ArrowRight, Zap } from "lucide-react";
+
+const plans = [
+  {
+    name: "Starter",
+    tagline: "Tu LLC + cuenta bancaria en 7 dÃ­as",
+    price: "599",
+    stateTag: "+ tasa estatal",
+    badge: null,
+    highlight: false,
+    accentColor: "rgba(201,168,76,0.15)",
+    icon: Building2,
+    deliverable: "LLC formada y cuenta bancaria activa en 7 dÃ­as hÃ¡biles",
+    features: [
+      "LLC en Wyoming, Delaware o New Mexico",
+      "EIN (Tax ID) â€” nÃºmero fiscal ante el IRS",
+      "Operating Agreement + ArtÃ­culos de organizaciÃ³n",
+      "Registered Agent por 1 aÃ±o",
+      "DirecciÃ³n comercial en USA por 1 aÃ±o",
+      "Apertura de cuenta Mercury o Relay",
+      "Reporte BOI ante FinCEN incluido",
+      "Soporte por email en espaÃ±ol",
+    ],
+    cta: "Quiero mi LLC ahora",
+  },
+  {
+    name: "Pro",
+    tagline: "LLC + banco + web + Stripe + ITIN",
+    price: "999",
+    stateTag: "+ tasa estatal",
+    badge: "MÃS POPULAR",
+    highlight: true,
+    accentColor: "rgba(201,168,76,0.1)",
+    icon: Globe,
+    deliverable: "Empresa 100% operativa y lista para cobrar en todo el mundo",
+    features: [
+      "Todo lo incluido en Starter",
+      "Sitio web profesional 3 pÃ¡ginas (.com en USA)",
+      "Hosting en servidores USA + SSL por 1 aÃ±o",
+      "Email corporativo @tudominio.com",
+      "Stripe configurado en tu LLC (cobros globales)",
+      "ITIN Number tramitado ante el IRS",
+      "Soporte prioritario 24/7 en espaÃ±ol",
+      "AsesorÃ­a fiscal inicial de 30 minutos",
+    ],
+    cta: "Empezar con Pro",
+  },
+  {
+    name: "Elite",
+    tagline: "Todo incluido + contabilidad anual",
+    price: "1,799",
+    stateTag: "fee estatal incluido",
+    badge: "TODO INCLUIDO",
+    highlight: false,
+    accentColor: "rgba(201,168,76,0.07)",
+    icon: BarChart3,
+    deliverable: "Tu empresa, contabilidad y cumplimiento fiscal manejado 12 meses",
+    features: [
+      "Todo lo incluido en Pro",
+      "Contabilidad mensual por 12 meses",
+      "DeclaraciÃ³n de impuestos anual al IRS",
+      "Account Manager dedicado en espaÃ±ol",
+      "RenovaciÃ³n anual de la LLC incluida",
+      "Fee del estado de formaciÃ³n cubierto",
+      "AsesorÃ­a tributaria 90 minutos",
+      "Soporte VIP ilimitado sin tiempos de espera",
+    ],
+    cta: "Quiero el plan completo",
+  },
+];
+
+const states = [
+  { state: "Wyoming", fee: "$100", popular: true },
+  { state: "Delaware", fee: "$90", popular: false },
+  { state: "New Mexico", fee: "$50", popular: false },
+  { state: "Florida", fee: "$125", popular: false },
+  { state: "Michigan", fee: "$50", popular: false },
+];
+
+export default function Pricing() {
+  return (
+    <section id="precios" className="py-28 px-6 relative overflow-hidden" style={{background:'#F0EDE6'}}>
+      <div className="absolute inset-0 subtle-grid opacity-30 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 section-divider" />
+
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full blur-3xl pointer-events-none" style={{background:'rgba(201,168,76,0.04)'}} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
+
+        {/* Header */}
+        <div className="text-center mb-20">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] mb-4 block" style={{color:'#C9A84C'}}>
+            Precios claros Â· Sin costos ocultos
+          </span>
+          <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight" style={{color:'#0F0F0F'}}>
+            Elige tu paquete y
+            <br />
+            <span className="gradient-text">empieza esta semana</span>
+          </h2>
+          <p className="text-lg max-w-xl mx-auto" style={{color:'rgba(15,15,15,0.5)'}}>
+            Todos los planes incluyen soporte en espaÃ±ol y documentaciÃ³n digital. Sin burocracia.
+          </p>
+        </div>
+
+        {/* Cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+          {plans.map((plan) => {
+            const Icon = plan.icon;
+            return (
+              <div
+                key={plan.name}
+                className="relative rounded-3xl overflow-hidden transition-all duration-300 flex flex-col"
+                style={plan.highlight ? {
+                  background: 'rgba(201,168,76,0.09)',
+                  border: '1px solid rgba(201,168,76,0.40)',
+                  boxShadow: '0 0 0 1px rgba(201,168,76,0.1), 0 24px 80px rgba(201,168,76,0.12)',
+                  transform: 'translateY(-8px)',
+                } : {
+                  background: 'rgba(255,255,255,0.02)',
+                  border: '1px solid rgba(255,255,255,0.07)',
+                }}
+              >
+                {/* Top bar accent */}
+                <div className="h-1 w-full" style={{background: plan.highlight ? 'linear-gradient(90deg, #C9A84C, #E2C97E, #C9A84C)' : 'rgba(255,255,255,0.06)'}} />
+
+                {/* Badge */}
+                {plan.badge && (
+                  <div className="absolute top-5 right-5">
+                    <span className="text-[10px] font-black tracking-widest px-3 py-1 rounded-full" style={{background:'#C9A84C', color:'#0A0A0B'}}>
+                      {plan.badge}
+                    </span>
+                  </div>
+                )}
+
+                <div className="p-8 flex flex-col flex-1">
+                  {/* Icon + name */}
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{background:'rgba(201,168,76,0.12)', border:'1px solid rgba(201,168,76,0.2)'}}>
+                      <Icon size={18} style={{color:'#C9A84C'}} />
+                    </div>
+                    <div>
+                      <div className="font-black text-lg leading-none" style={{color:'#0F0F0F'}}>{plan.name}</div>
+                      <div className="text-xs mt-0.5" style={{color:'#C9A84C'}}>{plan.tagline}</div>
+                    </div>
+                  </div>
+
+                  {/* Price */}
+                  <div className="mb-2">
+                    <div className="flex items-end gap-1">
+                      <span className="text-base font-medium mb-1" style={{color:'rgba(15,15,15,0.35)'}}>USD</span>
+                      <span className="text-6xl font-black leading-none" style={{color: plan.highlight ? '#B8922A' : '#0F0F0F'}}>${plan.price}</span>
+                    </div>
+                    <div className="text-xs mt-1" style={{color:'rgba(15,15,15,0.35)'}}>{plan.stateTag}</div>
+                  </div>
+
+                  {/* Deliverable promise */}
+                  <div className="rounded-xl p-3 mb-6 mt-4" style={{background:'rgba(201,168,76,0.06)', border:'1px solid rgba(201,168,76,0.12)'}}>
+                    <p className="text-xs leading-relaxed font-medium" style={{color:'#C9A84C'}}>
+                      âœ“ {plan.deliverable}
+                    </p>
+                  </div>
+
+                  {/* Features */}
+                  <ul className="space-y-2.5 mb-8 flex-1">
+                    {plan.features.map((f) => (
+                      <li key={f} className="flex items-start gap-2.5">
+                        <Check size={14} className="mt-0.5 shrink-0" style={{color:'#C9A84C'}} />
+                        <span className="text-sm leading-snug" style={{color:'rgba(15,15,15,0.55)'}}>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA */}
+                  <a
+                    href="mailto:info@apexstart.us"
+                    className={`w-full flex items-center justify-center gap-2 font-bold py-4 rounded-2xl transition-all duration-300 text-sm ${plan.highlight ? 'gold-button' : 'outline-button'}`}
+                  >
+                    {plan.cta}
+                    <ArrowRight size={15} />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* What's included banner */}
+        <div className="rounded-2xl p-8 mb-10" style={{background:'#FFFFFF', border:'1px solid rgba(184,146,42,0.15)', boxShadow:'0 2px 16px rgba(0,0,0,0.05)'}}>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { label: "LLC formada", sub: "3â€“5 dÃ­as hÃ¡biles" },
+              { label: "Cuenta bancaria", sub: "Mercury o Relay" },
+              { label: "Documentos digitales", sub: "PDF inmediato" },
+              { label: "Soporte en espaÃ±ol", sub: "Respuesta en 24hs" },
+            ].map((item) => (
+              <div key={item.label} className="flex flex-col items-center gap-1">
+                <div className="w-1.5 h-1.5 rounded-full mb-2" style={{background:'#B8922A'}} />
+                <div className="font-semibold text-sm" style={{color:'#0F0F0F'}}>{item.label}</div>
+                <div className="text-xs" style={{color:'rgba(15,15,15,0.4)'}}>{item.sub}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* State fees */}
+        <div className="flex flex-col items-center gap-4">
+          <p className="text-xs uppercase tracking-widest" style={{color:'rgba(15,15,15,0.3)'}}>Tasas estatales adicionales (si aplican)</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {states.map((s) => (
+              <div key={s.state} className="flex items-center gap-2 px-4 py-2 rounded-full" style={s.popular ? {background:'#FFFFFF', border:'1px solid rgba(184,146,42,0.35)', boxShadow:'0 1px 6px rgba(0,0,0,0.06)'} : {background:'#FFFFFF', border:'1px solid rgba(0,0,0,0.07)'}}>
+                {s.popular && <span className="w-1.5 h-1.5 rounded-full" style={{background:'#C9A84C'}} />}
+                <span className="text-xs font-medium" style={{color:'rgba(15,15,15,0.5)'}}>{s.state}</span>
+                <span className="text-xs font-bold" style={{color:'#C9A84C'}}>{s.fee}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </section>
+  );
+}
+

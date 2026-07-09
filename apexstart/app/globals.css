@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+/* ── ApexStart Palette ─────────────────────────
+   Accent: #002868 (navy)
+   Text:   #111827 (near black)
+   BG:     #FFFFFF (white)
+   Card:   #F5F7FA (light gray)
+   Border: #E5E9EF
+──────────────────────────────────────────────── */
+:root {
+  --bg:      #FFFFFF;
+  --bg-2:    #F5F7FA;
+  --ink:     #111827;
+  --navy:    #002868;
+  --navy-2:  #0A3A8A;
+  --white:   #FFFFFF;
+}
+
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Animations ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+@keyframes fade-up {
+  from { opacity:0; transform:translateY(24px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ── Gradient text (navy) ── */
+.gradient-text {
+  background: linear-gradient(90deg, #002868, #0A3A8A, #002868);
+  background-size: 200% auto;
+  animation: shimmer 5s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Primary CTA button: navy ── */
+.gold-button {
+  background: #002868;
+  color: #FFFFFF;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+.gold-button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #0A3A8A;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.gold-button:hover::after { opacity: 1; }
+.gold-button:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,40,104,0.3); }
+.gold-button > * { position: relative; z-index: 1; }
+
+/* ── Outline button: navy ── */
+.outline-button {
+  border: 1.5px solid rgba(0,40,104,0.25);
+  color: #002868;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  background: transparent;
+}
+.outline-button:hover {
+  border-color: #002868;
+  background: rgba(0,40,104,0.05);
+  transform: translateY(-2px);
+}
+
+/* ── Cards ── */
+.card {
+  background: #FFFFFF;
+  border: 1px solid #E5E9EF;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  border-color: rgba(0,40,104,0.2);
+  box-shadow: 0 12px 40px rgba(0,40,104,0.08);
+  transform: translateY(-4px);
+}
+
+/* ── Badges ── */
+.gold-badge {
+  background: rgba(0,40,104,0.07);
+  border: 1px solid rgba(0,40,104,0.18);
+  color: #002868;
+  font-weight: 600;
+}
+
+/* ── Surfaces ── */
+.glass {
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(16px);
+  border: 1px solid #E5E9EF;
+}
+.glass-hover { transition: all 0.3s ease; }
+.glass-hover:hover {
+  background: #fff;
+  border-color: rgba(0,40,104,0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,40,104,0.08);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #E5E9EF, transparent);
+}
+
+.subtle-grid {
+  background-image:
+    linear-gradient(#E5E9EF 1px, transparent 1px),
+    linear-gradient(90deg, #E5E9EF 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* ── Accent line (navy) ── */
+.gold-line {
+  height: 3px;
+  background: linear-gradient(90deg, #002868, #0A3A8A, #002868);
+  border-radius: 2px;
+}
+
+/* ── Tag ── */
+.tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #002868;
+}
+
+/* ── Legacy aliases ── */
+.glow-button { background:#002868; color:#fff; font-weight:700; transition:all 0.25s ease; }
+.glow-button:hover { background:#0A3A8A; transform:translateY(-2px); }
