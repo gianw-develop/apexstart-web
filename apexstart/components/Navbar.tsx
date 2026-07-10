@@ -37,11 +37,11 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-2 group">
-          <div className="w-7 h-7 rounded-md flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
-            style={{ background: "#22D3EE", boxShadow: "0 0 12px rgba(34,211,238,0.45)" }}
-          >
-            <span className="text-[#0A2540] font-black text-xs">A</span>
-          </div>
+          <img
+            src="./logo.png"
+            alt="ApexStart"
+            className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-105"
+          />
           <span className="font-semibold text-lg tracking-tight text-[#0F172A]">
             ApexStart
           </span>

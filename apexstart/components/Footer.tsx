@@ -91,10 +91,11 @@ export default function Footer() {
           }
           <div className="col-span-2 md:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-5">
-              <div className="w-7 h-7 rounded-md flex items-center justify-center bg-[#22D3EE]"
-              >
-                <span className="text-[#0A2540] font-black text-xs">A</span>
-              </div>
+              <img
+                src="./logo.png"
+                alt="ApexStart"
+                className="w-8 h-8 object-contain"
+              />
               <span className="font-semibold text-lg">ApexStart</span>
             </a>
             <p className="text-sm leading-relaxed mb-6 text-[rgba(255,255,255,0.55)]">
