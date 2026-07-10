@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 export default function FloatingCTA() {
   return (
     <a
-      href="https://wa.me/17869354213?text=Hola%2C%20quiero%20abrir%20mi%20LLC%20en%20EE.UU."
+      href="https://wa.me/34625218995?text=Hola%2C%20quiero%20abrir%20mi%20LLC%20en%20EE.UU."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-5 right-5 z-50 flex items-center gap-2 px-5 py-3 rounded-full text-white text-sm font-semibold transition-all duration-300 hover:scale-105"
