@@ -1,102 +1,43 @@
 "use client";
-import { ArrowRight, Mail } from "lucide-react";
 
-const facts = [
-  { value: "500+", label: "empresas formadas" },
-  { value: "7d",   label: "tiempo promedio" },
-  { value: "12",   label: "países de LATAM" },
-];
+import { ArrowRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section
-      className="relative overflow-hidden"
-      style={{ background: "#F5F7FA" }}
-    >
-      <div className="gold-line w-full" style={{ borderRadius: 0 }} />
+    <section className="py-28 px-6 bg-white">
+      <div className="max-w-4xl mx-auto text-center">
+        <div className="tag justify-center mb-5">Empezá hoy</div>
 
-      <div className="max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
-
-        {/* Left */}
-        <div>
-          <div className="flex items-center gap-3 mb-8">
-            <div className="gold-line w-6" />
-            <span className="tag">Empieza hoy</span>
-          </div>
-
-          <h2
-            className="font-black leading-[0.9] tracking-tighter mb-8"
-            style={{ fontSize: "clamp(2.8rem,6vw,5rem)", color: "#111827" }}
-          >
-            Tu empresa<br />
-            en EE.UU.<br />
-            <span className="gradient-text">te espera.</span>
-          </h2>
-
-          <div className="flex flex-wrap gap-4 mb-10">
-            {facts.map((f) => (
-              <div
-                key={f.label}
-                className="rounded-xl px-5 py-3"
-                style={{ background: "#FFFFFF", border: "1px solid #E5E9EF" }}
-              >
-                <div className="text-2xl font-black" style={{ color: "#002868" }}>{f.value}</div>
-                <div className="text-xs" style={{ color: "rgba(17,24,39,0.45)" }}>{f.label}</div>
-              </div>
-            ))}
-          </div>
-
-          <p className="text-base leading-relaxed max-w-md" style={{ color: "rgba(17,24,39,0.5)" }}>
-            Más de 500 emprendedores de LATAM ya operan en EE.UU. con ApexStart.
-            Sin viajes, sin burocracia, en español.
-          </p>
-        </div>
-
-        {/* Right - action card */}
-        <div
-          className="rounded-3xl p-8"
-          style={{ background: "#FFFFFF", border: "1px solid #E5E9EF" }}
+        <h2
+          className="text-display mb-6"
+          style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)" }}
         >
-          <p className="font-black text-2xl mb-2 leading-snug" style={{ color: "#111827" }}>
-            ¿Listo para arrancar?
-          </p>
-          <p className="text-sm mb-8" style={{ color: "rgba(17,24,39,0.45)" }}>
-            Respondemos en menos de 24 horas. Sin compromiso.
-          </p>
+          Tu empresa en EE.UU. lista
+          <br />
+          <span className="text-gradient">en menos de una semana.</span>
+        </h2>
 
-          <div className="flex flex-col gap-3">
-            <a
-              href="#precios"
-              className="gold-button flex items-center justify-center gap-2 py-4 rounded-xl text-sm"
-            >
-              <span>Formar mi LLC ahora</span>
-              <ArrowRight size={16} />
-            </a>
-            <a
-              href="mailto:info@apexstart.us"
-              className="flex items-center justify-center gap-2 py-4 rounded-xl text-sm font-semibold transition-all duration-200"
-              style={{
-                border: "1.5px solid #E5E9EF",
-                color: "#002868",
-              }}
-            >
-              <Mail size={15} />
-              Hablar con un asesor
-            </a>
-          </div>
+        <p className="text-base text-[#64748B] mb-10 max-w-xl mx-auto">
+          1,400+ emprendedores de LATAM ya operan con ApexStart. Sin viajes,
+          sin burocracia, en español.
+        </p>
 
-          <div
-            className="mt-8 pt-6"
-            style={{ borderTop: "1px solid #E5E9EF" }}
+        <div className="flex flex-wrap justify-center gap-4">
+          <a href="#precios" className="btn-primary px-8 py-3 text-sm">
+            Ver planes
+            <ArrowRight size={16} />
+          </a>
+          <a
+            href="mailto:info@apexstart.us"
+            className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-sm font-semibold transition-all hover:-translate-y-0.5"
+            style={{
+              background: "#D92B1F",
+              color: "#FFFFFF",
+              boxShadow: "0 0 18px #D92B1F, 0 0 34px rgba(217,43,31,0.45)",
+            }}
           >
-            <div className="flex flex-wrap gap-x-6 gap-y-2">
-              {["100% online", "Soporte en español", "Docs en 24hs", "Sin visitar EE.UU."].map((item) => (
-                <span key={item} className="text-xs" style={{ color: "rgba(17,24,39,0.35)" }}>
-                  · {item}
-                </span>
-              ))}
-            </div>
-          </div>
+            Hablar con ventas
+          </a>
         </div>
       </div>
     </section>

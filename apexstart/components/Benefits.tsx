@@ -1,132 +1,94 @@
 "use client";
-import { Building2, Landmark, Globe, CreditCard, FileText, BarChart3, ArrowRight } from "lucide-react";
+
+import {
+  Building2,
+  Landmark,
+  CreditCard,
+  FileText,
+  BarChart3,
+  Globe,
+  ArrowRight,
+} from "lucide-react";
 
 const services = [
   {
     icon: Building2,
-    num: "01",
-    title: "Formación de LLC",
-    desc: "Wyoming · Delaware · New Mexico. EIN, Operating Agreement y Artículos incluidos.",
-    dark: true,
-    wide: false,
+    title: "LLC en EE.UU.",
+    desc: "Cualquiera de los 50 estados. Artículos, Operating Agreement, EIN y Registered Agent incluidos.",
   },
   {
     icon: Landmark,
-    num: "02",
-    title: "Cuenta bancaria en USD",
-    desc: "Mercury o Relay, 100% online. Sin visitar EE.UU., sin SSN.",
-    dark: false,
-    wide: false,
-  },
-  {
-    icon: Globe,
-    num: "03",
-    title: "Web .com profesional",
-    desc: "Diseño, dominio .com, hosting USA, email corporativo.",
-    dark: false,
-    wide: true,
+    title: "Cuenta bancaria USD",
+    desc: "Mercury, Relay o Chase. Apertura 100% online, sin SSN y sin visitar EE.UU.",
   },
   {
     icon: CreditCard,
-    num: "04",
     title: "Stripe configurado",
-    desc: "Cobros globales con tarjeta desde el primer día.",
-    dark: false,
-    wide: false,
+    desc: "Cobrá a clientes de todo el mundo con tarjeta, transferencia o ACH desde el día uno.",
   },
   {
     icon: FileText,
-    num: "05",
     title: "ITIN ante el IRS",
-    desc: "Operá legalmente en EE.UU. sin número de seguro social.",
-    dark: true,
-    wide: false,
+    desc: "Tramitamos tu número de contribuyente personal para operar legalmente sin SSN.",
+  },
+  {
+    icon: Globe,
+    title: "Web profesional",
+    desc: "Diseño, dominio .com, hosting en EE.UU. y email corporativo para tu marca.",
   },
   {
     icon: BarChart3,
-    num: "06",
-    title: "Contabilidad mensual",
-    desc: "Cumplimiento con el IRS, declaraciones anuales. Sin multas.",
-    dark: false,
-    wide: false,
+    title: "Contabilidad",
+    desc: "P&L automático, recordatorios fiscales y declaraciones ante el IRS sin sorpresas.",
   },
 ];
 
 export default function Benefits() {
   return (
-    <section id="servicios" className="py-24 px-6 subtle-grid" style={{ background: "#FFFFFF" }}>
-      <div className="max-w-7xl mx-auto">
-
-        {/* Header row */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+    <section id="servicios" className="py-28 px-6 bg-[#F8F9FB]">
+      <div className="max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="gold-line w-6" />
-              <span className="tag">Servicios · Todo en un lugar</span>
-            </div>
+            <div className="tag mb-5">Servicios</div>
             <h2
-              className="font-black leading-[0.9] tracking-tighter"
-              style={{ fontSize: "clamp(2.5rem,5vw,4rem)", color: "#111827" }}
+              className="text-display"
+              style={{ fontSize: "clamp(2.2rem, 4.5vw, 3.5rem)" }}
             >
-              El kit completo para<br />
-              <span className="gradient-text">operar en EE.UU.</span>
+              Todo lo que necesitás
+              <br />
+              <span className="text-gradient">para operar legal.</span>
             </h2>
           </div>
-          <a
-            href="#precios"
-            className="inline-flex items-center gap-2 text-sm font-semibold shrink-0"
-            style={{ color: "#002868" }}
-          >
-            Ver precios <ArrowRight size={14} />
-          </a>
+          <div className="flex items-end">
+            <p className="text-base leading-relaxed text-[#64748B]">
+              Desde la formación de la LLC hasta la contabilidad anual. Un
+              único proveedor, un único punto de contacto, un único panel para
+              manejar tu empresa americana.
+            </p>
+          </div>
         </div>
 
-        {/* Bento grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((s) => {
             const Icon = s.icon;
             return (
-              <div
-                key={s.title}
-                className={`rounded-2xl p-7 flex flex-col justify-between group transition-all duration-300 ${s.wide ? "sm:col-span-2 lg:col-span-1" : ""}`}
-                style={
-                  s.dark
-                    ? { background: "#002868", minHeight: "200px" }
-                    : { background: "#F5F7FA", border: "1px solid rgba(0,40,104,0.1)", minHeight: "200px" }
-                }
-              >
-                <div className="flex items-start justify-between mb-8">
+              <div key={s.title} className="card p-7 group">
+                <div className="flex items-start justify-between mb-6">
                   <div
-                    className="w-10 h-10 rounded-xl flex items-center justify-center"
-                    style={
-                      s.dark
-                        ? { background: "rgba(0,40,104,0.15)", border: "1px solid rgba(0,40,104,0.3)" }
-                        : { background: "rgba(0,40,104,0.07)", border: "1px solid rgba(0,40,104,0.15)" }
-                    }
+                    className="w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300"
+                    style={{ background: "rgba(34,211,238,0.1)" }}
                   >
-                    <Icon size={18} style={{ color: s.dark ? "#002868" : "#002868" }} />
+                    <Icon size={18} className="text-[#0A2540] group-hover:text-[#22D3EE] group-hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.8)] transition-all" />
                   </div>
-                  <span
-                    className="text-xs font-black tracking-widest"
-                    style={{ color: s.dark ? "rgba(255,255,255,0.1)" : "rgba(0,40,104,0.08)" }}
-                  >
-                    {s.num}
-                  </span>
+                  <ArrowRight
+                    size={16}
+                    className="text-[#94A3B8] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:text-[#D92B1F] transition-all group-hover:drop-shadow-[0_0_6px_rgba(217,43,31,0.8)]"
+                  />
                 </div>
-                <div>
-                  <h3
-                    className="font-black text-lg mb-2 leading-snug"
-                    style={{ color: s.dark ? "#FFFFFF" : "#111827" }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    className="text-sm leading-relaxed"
-                    style={{ color: s.dark ? "rgba(255,255,255,0.5)" : "rgba(17,24,39,0.5)" }}
-                  >
-                    {s.desc}
-                  </p>
-                </div>
+                <h3 className="font-semibold text-base mb-2 text-[#0F172A]">
+                  {s.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-[#64748B]">{s.desc}</p>
               </div>
             );
           })}

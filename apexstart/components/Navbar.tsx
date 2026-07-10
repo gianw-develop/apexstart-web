@@ -1,12 +1,12 @@
 "use client";
+
 import { useState, useEffect } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { label: "Servicios", href: "#servicios" },
-  { label: "Cómo funciona", href: "#como-funciona" },
+  { label: "Plataforma", href: "#plataforma" },
   { label: "Precios", href: "#precios" },
-  { label: "Testimonios", href: "#testimonios" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -15,7 +15,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -25,15 +25,25 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? "py-3" : "py-5"
       }`}
-      style={scrolled ? {background:'rgba(255,255,255,0.96)', backdropFilter:'blur(20px)', borderBottom:'1px solid rgba(0,40,104,0.08)'} : {}}
+      style={
+        scrolled
+          ? {
+              background: "rgba(248,249,251,0.92)",
+              backdropFilter: "blur(20px)",
+              borderBottom: "1px solid #E2E8F0",
+            }
+          : { background: "transparent" }
+      }
     >
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg gold-button flex items-center justify-center">
-            <Zap size={16} className="text-white" />
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+        <a href="#" className="flex items-center gap-2 group">
+          <div className="w-7 h-7 rounded-md flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
+            style={{ background: "#22D3EE", boxShadow: "0 0 12px rgba(34,211,238,0.45)" }}
+          >
+            <span className="text-[#0A2540] font-black text-xs">A</span>
           </div>
-          <span className="font-bold text-xl tracking-tight" style={{color:'#111827'}}>
-            Apex<span style={{color:'#002868'}}>Start</span>
+          <span className="font-semibold text-lg tracking-tight text-[#0F172A]">
+            ApexStart
           </span>
         </a>
 
@@ -42,7 +52,7 @@ export default function Navbar() {
             <a
               key={l.href}
               href={l.href}
-              className="text-sm font-medium transition-colors duration-200" style={{color:'rgba(17,24,39,0.6)'}}
+              className="text-sm font-medium text-[#64748B] hover:text-[#0A2540] transition-colors duration-200"
             >
               {l.label}
             </a>
@@ -52,34 +62,39 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="mailto:info@apexstart.us"
-            className="text-sm font-medium transition-colors duration-200" style={{color:'rgba(17,24,39,0.6)'}}
+            className="text-sm font-medium text-[#64748B] hover:text-[#0A2540] transition-colors"
           >
-            Contacto
+              Contacto
           </a>
-          <a
-            href="#precios"
-            className="gold-button text-sm px-5 py-2.5 rounded-full"
-          >
-            Empezar ahora →
+          <a href="#precios" className="btn-primary text-sm px-5 py-2">
+            Comenzar
           </a>
         </div>
 
         <button
-          className="md:hidden" style={{color:'rgba(17,24,39,0.7)'}}
+          className="md:hidden p-2 text-[#64748B]"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
-          {open ? <X size={22} /> : <Menu size={22} />}
+          {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
 
       {open && (
-        <div className="md:hidden mt-2 px-6 py-4 flex flex-col gap-4" style={{background:'rgba(255,255,255,0.98)', borderTop:'1px solid rgba(0,40,104,0.08)'}}>
+        <div
+          className="md:hidden absolute top-full left-0 right-0 px-6 py-5 flex flex-col gap-4"
+          style={{
+            background: "rgba(248,249,251,0.98)",
+            borderTop: "1px solid #E2E8F0",
+            backdropFilter: "blur(20px)",
+          }}
+        >
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-sm font-medium transition-colors" style={{color:'rgba(17,24,39,0.7)'}}
+              className="text-sm font-medium text-[#64748B] hover:text-[#0A2540] transition-colors"
             >
               {l.label}
             </a>
@@ -87,9 +102,9 @@ export default function Navbar() {
           <a
             href="#precios"
             onClick={() => setOpen(false)}
-            className="gold-button text-sm px-5 py-2.5 rounded-full text-center mt-2"
+            className="btn-primary text-sm px-5 py-3 text-center mt-2"
           >
-            Empezar ahora →
+            Comenzar
           </a>
         </div>
       )}

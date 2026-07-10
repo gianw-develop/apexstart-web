@@ -1,149 +1,188 @@
 "use client";
-import { ArrowRight, Check, Shield, Clock, Globe2 } from "lucide-react";
+
+import { ArrowRight, ArrowUpRight, CheckCircle2, Sparkles, Star } from "lucide-react";
 
 const stats = [
-  { v: "500+", l: "Empresas formadas" },
-  { v: "7 días", l: "Tiempo promedio" },
-  { v: "12", l: "Países de LATAM" },
-  { v: "100%", l: "Online" },
+  { v: "1,400+", l: "Empresas formadas" },
+  { v: "5-7 días", l: "Tiempo promedio" },
+  { v: "4.9", l: "Trustpilot", star: true },
 ];
 
-const services = [
-  "LLC formada (Wyoming / Delaware / NM)",
-  "Cuenta bancaria USD — Mercury o Relay",
-  "EIN ante el IRS incluido",
-  "Reporte BOI ante FinCEN",
-  "Soporte en español 24hs",
-];
-
-const badges = [
-  { icon: Shield,  text: "Proceso 100% legal" },
-  { icon: Clock,   text: "Listo en 7 días" },
-  { icon: Globe2,  text: "Desde cualquier país" },
+const highlights = [
+  "LLC formada en 50 estados",
+  "Cuenta bancaria Mercury/Relay",
+  "EIN incluido",
+  "Plataforma de operación",
 ];
 
 export default function Hero() {
   return (
-    <section
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-28 pb-20 px-6"
-      style={{ background: "#FFFFFF" }}
-    >
-      {/* Subtle blue tint top-right */}
-      <div
-        className="absolute top-0 right-0 w-[50%] h-[70%] pointer-events-none"
-        style={{ background: "radial-gradient(ellipse at 100% 0%, rgba(0,40,104,0.05) 0%, transparent 70%)" }}
-      />
-
-      <div className="relative z-10 max-w-6xl mx-auto w-full">
-
-        {/* Eyebrow */}
-        <div className="flex items-center gap-3 mb-8">
-          <div className="h-[3px] w-8 rounded-full" style={{ background: "#002868" }} />
-          <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "#002868" }}>
-            Formación de LLC · 100% online
+    <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 bg-[#F8F9FB]">
+      <div className="max-w-6xl mx-auto w-full">
+        {
+          /* Top eyebrow */
+        }
+        <div className="flex flex-wrap items-center gap-4 mb-8">
+          <span
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium neon-border"
+            style={{
+              background: "rgba(34,211,238,0.1)",
+              color: "#0A2540",
+            }}
+          >
+            <CheckCircle2 size={12} className="text-[#22D3EE]" style={{ filter: "drop-shadow(0 0 4px rgba(34,211,238,0.7))" }} />
+            100% online — sin residencia ni viajes
+            <span
+              className="w-1.5 h-1.5 rounded-full"
+              style={{ background: "#D92B1F", boxShadow: "0 0 10px #D92B1F, 0 0 18px rgba(217,43,31,0.7)" }}
+            />
+          </span>
+          <span className="text-xs text-[#94A3B8]">
+            info@apexstart.us
           </span>
         </div>
 
-        {/* Headline */}
-        <h1
-          className="font-black tracking-tighter leading-[0.9] mb-6"
-          style={{ fontSize: "clamp(3rem, 8vw, 6.5rem)", color: "#111827" }}
-        >
-          Tu empresa en EE.UU.
-          <br />
-          <span style={{ color: "#002868" }}>lista en 7 días.</span>
-        </h1>
+        {
+          /* Headline */
+        }
+        <div className="grid lg:grid-cols-12 gap-12 items-end">
+          <div className="lg:col-span-8">
+            <h1
+              className="text-display mb-8"
+              style={{ fontSize: "clamp(2.8rem, 6vw, 5.5rem)" }}
+            >
+              Tu empresa en EE.UU.,
+              <br />
+              lista para operar{" "}
+              <span className="text-gradient">en una semana.</span>
+              <span className="hidden lg:inline-flex items-center align-top ml-3">
+                <Sparkles size={42} className="text-[#D92B1F]" style={{ filter: "drop-shadow(0 0 10px rgba(217,43,31,0.55))" }} />
+              </span>
+            </h1>
 
-        {/* Sub + content row */}
-        <div className="grid md:grid-cols-2 gap-12 mb-14 items-start">
-          <div>
-            <p className="text-lg leading-relaxed mb-8" style={{ color: "rgba(17,24,39,0.55)" }}>
-              Abrimos tu LLC y tu cuenta bancaria en USD desde cero.
-              Sin viajes, sin burocracia, en español.
+            <p className="text-lg leading-relaxed mb-10 max-w-2xl text-[#64748B]">
+              Formamos tu empresa, abrimos tu cuenta bancaria en USD y te damos
+              la plataforma para facturar, contabilizar y crecer. Todo en
+              español, desde cualquier país de LATAM.
             </p>
 
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-3 mb-10">
-              <a
-                href="#precios"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-sm font-bold text-white transition-all duration-200 hover:opacity-90"
-                style={{ background: "#002868", boxShadow: "0 4px 20px rgba(0,40,104,0.25)" }}
-              >
-                Formar mi LLC ahora
+            <div className="flex flex-wrap gap-4 mb-12">
+              <a href="#precios" className="btn-primary px-7 py-3 text-sm">
+                Comenzar ahora
                 <ArrowRight size={16} />
               </a>
               <a
-                href="#como-funciona"
-                className="inline-flex items-center gap-2 px-7 py-4 rounded-full text-sm font-semibold transition-all duration-200"
-                style={{ border: "1.5px solid rgba(0,40,104,0.2)", color: "#002868" }}
+                href="https://calendly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary px-7 py-3 text-sm"
               >
-                Ver cómo funciona
+                Agendar llamada
               </a>
             </div>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-3">
-              {badges.map((b) => {
-                const Icon = b.icon;
-                return (
-                  <div
-                    key={b.text}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium"
-                    style={{ background: "rgba(0,40,104,0.05)", border: "1px solid rgba(0,40,104,0.1)", color: "rgba(17,24,39,0.6)" }}
-                  >
-                    <Icon size={11} style={{ color: "#002868" }} />
-                    {b.text}
+            {
+              /* Stats */
+            }
+            <div className="flex flex-wrap gap-10">
+              {stats.map((s) => (
+                <div key={s.l}>
+                  <div className="font-mono text-2xl font-semibold text-[#0A2540]">
+                    {s.v}
+                    {s.star && (
+                      <Star size={20} className="ml-1 inline-block text-[#D92B1F]" style={{ filter: "drop-shadow(0 0 6px rgba(217,43,31,0.5))", fill: "#D92B1F" }} />
+                    )}
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Checklist card */}
-          <div
-            className="rounded-2xl p-6"
-            style={{ background: "#F5F7FA", border: "1px solid rgba(0,40,104,0.1)" }}
-          >
-            <p className="text-xs font-bold uppercase tracking-widest mb-5" style={{ color: "#002868" }}>
-              Incluido en todos los planes
-            </p>
-            <ul className="space-y-3 mb-5">
-              {services.map((s) => (
-                <li key={s} className="flex items-center gap-3">
-                  <span
-                    className="w-5 h-5 rounded-full flex items-center justify-center shrink-0"
-                    style={{ background: "rgba(0,40,104,0.08)", border: "1px solid rgba(0,40,104,0.18)" }}
-                  >
-                    <Check size={11} style={{ color: "#002868" }} />
-                  </span>
-                  <span className="text-sm font-medium" style={{ color: "#111827" }}>{s}</span>
-                </li>
+                  <div className="text-xs text-[#94A3B8] mt-0.5">{s.l}</div>
+                </div>
               ))}
-            </ul>
-            <div className="pt-4 flex items-center gap-2" style={{ borderTop: "1px solid rgba(0,40,104,0.08)" }}>
-              <span className="w-2 h-2 rounded-full bg-emerald-500" />
-              <span className="text-xs" style={{ color: "rgba(17,24,39,0.45)" }}>Servicio activo · Respuesta en 24hs</span>
+            </div>
+          </div>
+
+          {
+            /* Dashboard mockup */
+          }
+          <div className="lg:col-span-4">
+            <div
+              className="rounded-2xl p-5 relative overflow-hidden card neon-border"
+              style={{
+                background: "#FFFFFF",
+              }}
+            >
+              {
+                /* Header bar */
+              }
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#D92B1F", boxShadow: "0 0 10px #D92B1F, 0 0 18px rgba(217,43,31,0.7)" }}></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+                </div>
+                <span className="text-[10px] text-[#22D3EE] font-mono neon-text">
+                  apexstart.io
+                </span>
+              </div>
+
+              {
+                /* Balance */
+              }
+              <div className="mb-6">
+                <p className="text-xs text-[#94A3B8] mb-1">Balance LLC</p>
+                <p className="font-mono text-3xl font-semibold text-[#0A2540]">
+                  $24,580.00
+                </p>
+                <p className="text-xs text-[#10B981] mt-1">+12.4% este mes</p>
+              </div>
+
+              {
+                /* Chart bars */
+              }
+              <div className="flex items-end gap-2 h-20 mb-6">
+                {[35, 52, 28, 64, 48, 78, 62, 88, 74, 96, 58, 82].map((h, i) => (
+                  <div
+                    key={i}
+                    className="flex-1 rounded-sm"
+                    style={{
+                      height: `${h}%`,
+                      background: i === 11 ? "#22D3EE" : "#E2E8F0",
+                      boxShadow:
+                        i === 11 ? "0 0 14px #22D3EE, 0 0 24px rgba(34,211,238,0.6)" : "none",
+                    }}
+                  />
+                ))}
+              </div>
+
+              {
+                /* Quick actions */
+              }
+              <div className="grid grid-cols-2 gap-3 mb-5">
+                {highlights.map((h) => (
+                  <div
+                    key={h}
+                    className="rounded-lg px-3 py-2.5 text-xs font-medium text-[#0F172A]"
+                    style={{ background: "#F8F9FB" }}
+                  >
+                    <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#22D3EE] mr-1.5"
+                      style={{ boxShadow: "0 0 8px #22D3EE, 0 0 14px rgba(34,211,238,0.7)" }}
+                    />
+                    {h}
+                  </div>
+                ))}
+              </div>
+
+              {
+                /* CTA in mockup */
+              }
+              <a
+                href="#plataforma"
+                className="flex items-center justify-between text-xs font-medium text-[#0A2540] hover:text-[#22D3EE] transition-colors group"
+              >
+                Ver plataforma completa
+                <ArrowUpRight size={14} className="group-hover:text-[#22D3EE]" style={{ filter: "drop-shadow(0 0 4px rgba(34,211,238,0.6))" }} />
+              </a>
             </div>
           </div>
         </div>
-
-        {/* Stats bar */}
-        <div
-          className="grid grid-cols-2 md:grid-cols-4 divide-x overflow-hidden rounded-2xl"
-          style={{ background: "#002868" }}
-        >
-          {stats.map((s, i) => (
-            <div
-              key={s.l}
-              className="flex flex-col items-center justify-center py-7 px-4 text-center"
-              style={{ borderRight: i < 3 ? "1px solid rgba(255,255,255,0.1)" : "none" }}
-            >
-              <span className="text-3xl font-black mb-1" style={{ color: "#FFFFFF" }}>{s.v}</span>
-              <span className="text-xs" style={{ color: "rgba(255,255,255,0.45)" }}>{s.l}</span>
-            </div>
-          ))}
-        </div>
-
       </div>
     </section>
   );
