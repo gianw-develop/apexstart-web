@@ -92,7 +92,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <a href="#" className="flex items-center gap-2 mb-5">
               <img
-                src="./logo.png"
+                src="/logo.png"
                 alt="ApexStart"
                 className="w-8 h-8 object-contain"
               />

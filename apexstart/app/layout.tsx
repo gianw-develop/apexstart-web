@@ -29,6 +29,10 @@ export const metadata: Metadata = {
     "Stripe",
     "LATAM",
   ],
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   openGraph: {
     title: "ApexStart — Tu LLC en EE.UU. desde LATAM",
     description:
