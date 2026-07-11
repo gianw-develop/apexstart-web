@@ -73,7 +73,7 @@ export default function Hero() {
             >
               Tu LLC en USA + Cuenta en USD
               <br />
-              Lista en 7 días.
+              <span className="text-gradient">Lista en 7 días.</span>
               <span className="hidden lg:inline-flex items-center align-top ml-3">
                 <Sparkles size={42} className="text-[#22D3EE]" style={{ filter: "drop-shadow(0 0 10px rgba(34,211,238,0.55))" }} />
               </span>
