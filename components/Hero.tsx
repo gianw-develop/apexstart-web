@@ -71,10 +71,10 @@ export default function Hero() {
               className="text-display mb-8"
               style={{ fontSize: "clamp(2.8rem, 6vw, 5.5rem)" }}
             >
-              Tu empresa en EE.UU.,
+              Tu LLC + cuenta bancaria
               <br />
-              lista para operar{" "}
-              <span className="text-gradient">en una semana.</span>
+              en EE.UU. lista en{" "}
+              <span className="text-gradient">7 días.</span>
               <span className="hidden lg:inline-flex items-center align-top ml-3">
                 <Sparkles size={42} className="text-[#FF6B6B]" style={{ filter: "drop-shadow(0 0 10px rgba(255,107,107,0.55))" }} />
               </span>
