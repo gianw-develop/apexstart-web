@@ -42,9 +42,6 @@ export default function Navbar() {
             alt="ApexStart"
             className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
-          <span className="font-semibold text-lg tracking-tight text-[#0F172A]">
-            ApexStart
-          </span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">

@@ -17,8 +17,28 @@ const highlights = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 bg-[#F8F9FB]">
-      <div className="max-w-6xl mx-auto w-full">
+    <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 px-6 bg-[#F8F9FB] overflow-hidden">
+      {
+        /* American background — Statue of Liberty */
+      }
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: "url('https://images.unsplash.com/photo-1605130284535-11dd9eedc58a?auto=format&fit=crop&w=1920&q=60')",
+          backgroundPosition: "center right",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          opacity: 0.12,
+        }}
+      />
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: "linear-gradient(90deg, #F8F9FB 0%, rgba(248,249,251,0.92) 45%, rgba(248,249,251,0.4) 100%)",
+        }}
+      />
+
+      <div className="relative z-10 max-w-6xl mx-auto w-full">
         {
           /* Top eyebrow */
         }
