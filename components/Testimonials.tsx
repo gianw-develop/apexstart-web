@@ -63,8 +63,8 @@ export default function Testimonials() {
               <Star
                 key={i}
                 size={16}
-                className="text-[#D92B1F] fill-[#D92B1F]"
-                style={{ filter: "drop-shadow(0 0 6px rgba(217,43,31,0.75))" }}
+                className="text-[#A855F7] fill-[#A855F7]"
+                style={{ filter: "drop-shadow(0 0 6px rgba(168,85,247,0.75))" }}
               />
             ))}
             <span className="text-sm font-medium text-[#0F172A]">4.9 Trustpilot</span>
@@ -79,8 +79,8 @@ export default function Testimonials() {
                   <Star
                     key={i}
                     size={12}
-                    className="text-[#D92B1F] fill-[#D92B1F]"
-                    style={{ filter: "drop-shadow(0 0 5px rgba(217,43,31,0.7))" }}
+                    className="text-[#A855F7] fill-[#A855F7]"
+                    style={{ filter: "drop-shadow(0 0 5px rgba(168,85,247,0.7))" }}
                   />
                 ))}
               </div>

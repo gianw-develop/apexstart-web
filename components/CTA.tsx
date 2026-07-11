@@ -31,9 +31,9 @@ export default function CTA() {
             href="mailto:info@apexstart.us"
             className="inline-flex items-center justify-center gap-2 px-8 py-3 rounded-full text-sm font-semibold transition-all hover:-translate-y-0.5"
             style={{
-              background: "#D92B1F",
+              background: "#A855F7",
               color: "#FFFFFF",
-              boxShadow: "0 0 18px #D92B1F, 0 0 34px rgba(217,43,31,0.45)",
+              boxShadow: "0 0 18px #A855F7, 0 0 34px rgba(168,85,247,0.45)",
             }}
           >
             Hablar con ventas

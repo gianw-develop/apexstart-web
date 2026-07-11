@@ -53,7 +53,7 @@ export default function Footer() {
                 <br />
                 Lista en una semana.
                 <span className="hidden lg:inline-flex items-center align-top ml-3">
-                  <Sparkles size={36} className="text-[#D92B1F]" style={{ filter: "drop-shadow(0 0 10px rgba(217,43,31,0.55))" }} />
+                  <Sparkles size={36} className="text-[#A855F7]" style={{ filter: "drop-shadow(0 0 10px rgba(168,85,247,0.55))" }} />
                 </span>
               </h3>
               <p className="text-sm text-[rgba(255,255,255,0.6)]">
@@ -90,13 +90,12 @@ export default function Footer() {
             /* Brand */
           }
           <div className="col-span-2 md:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-5">
+            <a href="#" className="flex items-center mb-5">
               <img
                 src="/logo.png"
                 alt="ApexStart"
-                className="w-8 h-8 object-contain"
-              />
-              <span className="font-semibold text-lg">ApexStart</span>
+                className="h-8 w-auto object-contain"
+              />
             </a>
             <p className="text-sm leading-relaxed mb-6 text-[rgba(255,255,255,0.55)]">
               Tu socio para establecer y operar tu empresa en EE.UU. desde
@@ -207,3 +206,5 @@ export default function Footer() {
     </footer>
   );
 }
+
+

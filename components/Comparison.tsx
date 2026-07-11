@@ -93,9 +93,9 @@ function Value({ value }: { value: boolean }) {
     </span>
   ) : (
     <span className="w-6 h-6 rounded-full inline-flex items-center justify-center"
-      style={{ background: "rgba(217,43,31,0.12)", boxShadow: "0 0 10px #D92B1F, 0 0 20px rgba(217,43,31,0.35)" }}
+      style={{ background: "rgba(168,85,247,0.12)", boxShadow: "0 0 10px #A855F7, 0 0 20px rgba(168,85,247,0.35)" }}
     >
-      <X size={12} style={{ color: "#D92B1F", filter: "drop-shadow(0 0 3px rgba(217,43,31,0.8))" }} />
+      <X size={12} style={{ color: "#A855F7", filter: "drop-shadow(0 0 3px rgba(168,85,247,0.8))" }} />
     </span>
   );
 }

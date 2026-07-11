@@ -34,7 +34,7 @@ export default function Hero() {
             100% online — sin residencia ni viajes
             <span
               className="w-1.5 h-1.5 rounded-full"
-              style={{ background: "#D92B1F", boxShadow: "0 0 10px #D92B1F, 0 0 18px rgba(217,43,31,0.7)" }}
+              style={{ background: "#A855F7", boxShadow: "0 0 10px #A855F7, 0 0 18px rgba(168,85,247,0.7)" }}
             />
           </span>
           <span className="text-xs text-[#94A3B8]">
@@ -56,7 +56,7 @@ export default function Hero() {
               lista para operar{" "}
               <span className="text-gradient">en una semana.</span>
               <span className="hidden lg:inline-flex items-center align-top ml-3">
-                <Sparkles size={42} className="text-[#D92B1F]" style={{ filter: "drop-shadow(0 0 10px rgba(217,43,31,0.55))" }} />
+                <Sparkles size={42} className="text-[#A855F7]" style={{ filter: "drop-shadow(0 0 10px rgba(168,85,247,0.55))" }} />
               </span>
             </h1>
 
@@ -90,7 +90,7 @@ export default function Hero() {
                   <div className="font-mono text-2xl font-semibold text-[#0A2540]">
                     {s.v}
                     {s.star && (
-                      <Star size={20} className="ml-1 inline-block text-[#D92B1F]" style={{ filter: "drop-shadow(0 0 6px rgba(217,43,31,0.5))", fill: "#D92B1F" }} />
+                      <Star size={20} className="ml-1 inline-block text-[#A855F7]" style={{ filter: "drop-shadow(0 0 6px rgba(168,85,247,0.5))", fill: "#A855F7" }} />
                     )}
                   </div>
                   <div className="text-xs text-[#94A3B8] mt-0.5">{s.l}</div>
@@ -114,7 +114,7 @@ export default function Hero() {
               }
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#D92B1F", boxShadow: "0 0 10px #D92B1F, 0 0 18px rgba(217,43,31,0.7)" }}></span>
+                  <span className="w-2.5 h-2.5 rounded-full" style={{ background: "#A855F7", boxShadow: "0 0 10px #A855F7, 0 0 18px rgba(168,85,247,0.7)" }}></span>
                   <span className="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
                 </div>

@@ -94,7 +94,7 @@ export default function Platform() {
               }
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full" style={{ background: "#D92B1F", boxShadow: "0 0 12px #D92B1F, 0 0 22px rgba(217,43,31,0.6)" }}></div>
+                  <div className="w-3 h-3 rounded-full" style={{ background: "#A855F7", boxShadow: "0 0 12px #A855F7, 0 0 22px rgba(168,85,247,0.6)" }}></div>
                   <div className="w-3 h-3 rounded-full bg-amber-400"></div>
                   <div className="w-3 h-3 rounded-full bg-emerald-400"></div>
                 </div>

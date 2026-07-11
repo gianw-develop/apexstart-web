@@ -36,11 +36,11 @@ export default function Navbar() {
       }
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="#" className="flex items-center group">
           <img
             src="/logo.png"
             alt="ApexStart"
-            className="w-8 h-8 object-contain transition-transform duration-300 group-hover:scale-105"
+            className="h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
           <span className="font-semibold text-lg tracking-tight text-[#0F172A]">
             ApexStart
@@ -111,3 +111,4 @@ export default function Navbar() {
     </header>
   );
 }
+

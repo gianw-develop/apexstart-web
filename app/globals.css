@@ -9,7 +9,7 @@
    Navy:       #0A2540
    Hover:      #143D5E
    Neon:       #22D3EE  (cyan)
-   Neon-red:   #D92B1F  (classic bright red flag accent)
+   neon-accent:   #A855F7  (classic bright red flag accent)
    Neon-soft:  rgba(34, 211, 238, 0.12)
    Border:     #E2E8F0
    Success:    #10B981
@@ -24,9 +24,9 @@
   --navy:        #0A2540;
   --navy-2:      #143D5E;
   --neon:        #22D3EE;
-  --neon-red:    #D92B1F;
-  --neon-red-soft: rgba(217, 43, 31, 0.14);
-  --neon-red-glow: rgba(217, 43, 31, 0.5);
+  --neon-accent:    #A855F7;
+  --neon-accent-soft: rgba(217, 43, 31, 0.14);
+  --neon-accent-glow: rgba(217, 43, 31, 0.5);
   --neon-soft:   rgba(34, 211, 238, 0.14);
   --neon-glow:   rgba(34, 211, 238, 0.55);
   --border:      #E2E8F0;
@@ -193,17 +193,17 @@ body {
   box-shadow: 0 0 40px rgba(34, 211, 238, 0.25);
 }
 
-.neon-red-text {
-  color: var(--neon-red);
+.neon-accent-text {
+  color: var(--neon-accent);
   text-shadow: 0 0 8px rgba(217, 43, 31, 0.4), 0 0 26px rgba(217, 43, 31, 0.32);
 }
 
-.neon-red-border {
+.neon-accent-border {
   border-color: rgba(217, 43, 31, 0.5);
   box-shadow: 0 0 28px rgba(217, 43, 31, 0.2), inset 0 0 0 1px rgba(217, 43, 31, 0.22);
 }
 
-.neon-red-glow {
+.neon-accent-glow {
   box-shadow: 0 0 36px rgba(217, 43, 31, 0.24);
 }
 

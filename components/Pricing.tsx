@@ -98,8 +98,8 @@ export default function Pricing() {
                 <span
                   className="absolute -top-3 left-8 px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-white"
                   style={{
-                    background: "#D92B1F",
-                    boxShadow: "0 0 18px #D92B1F, 0 0 30px rgba(217,43,31,0.55)",
+                    background: "#A855F7",
+                    boxShadow: "0 0 18px #A855F7, 0 0 30px rgba(168,85,247,0.55)",
                   }}
                 >
                   Más elegido
@@ -142,7 +142,7 @@ export default function Pricing() {
                     ? {
                         background: "#0A2540",
                         color: "#fff",
-                        boxShadow: "0 0 18px rgba(217,43,31,0.35)",
+                        boxShadow: "0 0 18px rgba(168,85,247,0.35)",
                       }
                     : {
                         background: "#FFFFFF",

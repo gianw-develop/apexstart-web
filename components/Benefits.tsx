@@ -82,7 +82,7 @@ export default function Benefits() {
                   </div>
                   <ArrowRight
                     size={16}
-                    className="text-[#94A3B8] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:text-[#D92B1F] transition-all group-hover:drop-shadow-[0_0_6px_rgba(217,43,31,0.8)]"
+                    className="text-[#94A3B8] opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:text-[#A855F7] transition-all group-hover:drop-shadow-[0_0_6px_rgba(168,85,247,0.8)]"
                   />
                 </div>
                 <h3 className="font-semibold text-base mb-2 text-[#0F172A]">
