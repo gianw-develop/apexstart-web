@@ -28,13 +28,13 @@ export default function Hero() {
           backgroundPosition: "center right",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          opacity: 0.12,
+          opacity: 0.28,
         }}
       />
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          background: "linear-gradient(90deg, #F8F9FB 0%, rgba(248,249,251,0.92) 45%, rgba(248,249,251,0.4) 100%)",
+          background: "linear-gradient(90deg, #F8F9FB 0%, rgba(248,249,251,0.85) 40%, rgba(248,249,251,0.55) 100%)",
         }}
       />
 
