@@ -67,10 +67,11 @@ body {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, #0A2540 0%, #22D3EE 55%, #0A2540 100%);
+  background: linear-gradient(135deg, #22D3EE 0%, #0A2540 50%, #22D3EE 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: #22D3EE;
 }
 
 .font-mono {
