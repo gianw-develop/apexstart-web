@@ -6,7 +6,7 @@ const plans = [
   {
     name: "Starter",
     tagline: "Para emprendedores que empiezan",
-    price: "599",
+    price: "699",
     stateFee: true,
     features: [
       "LLC en Wyoming, Delaware, NM, MT o FL",
@@ -21,7 +21,7 @@ const plans = [
   {
     name: "Pro",
     tagline: "Para operar en serio",
-    price: "850",
+    price: "950",
     stateFee: true,
     popular: true,
     features: [
@@ -169,7 +169,7 @@ export default function Pricing() {
             <p className="text-xs font-medium tracking-widest uppercase opacity-60 mb-2">
               Premium / Enterprise
             </p>
-            <p className="text-2xl font-semibold mb-1">$1,450 USD</p>
+            <p className="text-2xl font-semibold mb-1">$1,550 USD</p>
             <p className="text-sm opacity-70">
               Solución anual completa. Contáctanos y armamos tu propuesta.
             </p>
