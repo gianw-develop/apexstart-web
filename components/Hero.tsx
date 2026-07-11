@@ -75,7 +75,7 @@ export default function Hero() {
               <br />
               Lista en 7 días.
               <span className="hidden lg:inline-flex items-center align-top ml-3">
-                <Sparkles size={42} className="text-[#FF6B6B]" style={{ filter: "drop-shadow(0 0 10px rgba(255,107,107,0.55))" }} />
+                <Sparkles size={42} className="text-[#22D3EE]" style={{ filter: "drop-shadow(0 0 10px rgba(34,211,238,0.55))" }} />
               </span>
             </h1>
 
@@ -109,7 +109,7 @@ export default function Hero() {
                   <div className="font-mono text-2xl font-semibold text-[#0A2540]">
                     {s.v}
                     {s.star && (
-                      <Star size={20} className="ml-1 inline-block text-[#FF6B6B]" style={{ filter: "drop-shadow(0 0 6px rgba(255,107,107,0.5))", fill: "#FF6B6B" }} />
+                      <Star size={20} className="ml-1 inline-block text-[#22D3EE]" style={{ filter: "drop-shadow(0 0 6px rgba(34,211,238,0.5))", fill: "#22D3EE" }} />
                     )}
                   </div>
                   <div className="text-xs text-[#94A3B8] mt-0.5">{s.l}</div>

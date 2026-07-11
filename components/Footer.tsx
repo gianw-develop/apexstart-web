@@ -53,7 +53,7 @@ export default function Footer() {
                 <br />
                 Lista en 7 días.
                 <span className="hidden lg:inline-flex items-center align-top ml-3">
-                  <Sparkles size={36} className="text-[#FF6B6B]" style={{ filter: "drop-shadow(0 0 10px rgba(255,107,107,0.55))" }} />
+                  <Sparkles size={36} className="text-[#22D3EE]" style={{ filter: "drop-shadow(0 0 10px rgba(34,211,238,0.55))" }} />
                 </span>
               </h3>
               <p className="text-sm text-[rgba(255,255,255,0.6)]">
