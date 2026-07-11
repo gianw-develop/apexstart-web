@@ -66,10 +66,10 @@ export default function HowItWorks() {
               <div key={step.number} className="card p-6 flex items-start gap-5 group">
                 <div className="flex flex-col items-center gap-1">
                   <span className="font-mono text-sm font-semibold"
-                    style={{ color: "#A855F7", textShadow: "0 0 10px #A855F7, 0 0 22px rgba(168,85,247,0.55)" }}
+                    style={{ color: "#FF6B6B", textShadow: "0 0 10px #FF6B6B, 0 0 22px rgba(255,107,107,0.55)" }}
                   >{step.number}</span>
                   {i < steps.length - 1 && (
-                    <div className="w-px h-10" style={{ background: "linear-gradient(180deg, #A855F7, transparent)", boxShadow: "0 0 10px rgba(168,85,247,0.35)" }} />
+                    <div className="w-px h-10" style={{ background: "linear-gradient(180deg, #FF6B6B, transparent)", boxShadow: "0 0 10px rgba(255,107,107,0.35)" }} />
                   )}
                 </div>
                 <div className="flex-1">
@@ -77,7 +77,7 @@ export default function HowItWorks() {
                     <h3 className="font-semibold text-base text-[#0F172A]">
                       {step.title}
                     </h3>
-                    <span className="text-[10px] font-mono font-medium px-2 py-1 rounded transition-colors group-hover:text-[#A855F7] group-hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.6)]"
+                    <span className="text-[10px] font-mono font-medium px-2 py-1 rounded transition-colors group-hover:text-[#FF6B6B] group-hover:drop-shadow-[0_0_4px_rgba(255,107,107,0.6)]"
                       style={{ background: "#F1F5F9", color: "#64748B" }}
                     >
                       {step.time}

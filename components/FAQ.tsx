@@ -75,10 +75,10 @@ export default function FAQ() {
                   {faq.q}
                 </span>
                 <span className="shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-colors"
-                  style={{ background: open === i ? "rgba(168,85,247,0.15)" : "#F1F5F9", boxShadow: open === i ? "0 0 12px rgba(168,85,247,0.35)" : "none" }}
+                  style={{ background: open === i ? "rgba(255,107,107,0.15)" : "#F1F5F9", boxShadow: open === i ? "0 0 12px rgba(255,107,107,0.35)" : "none" }}
                 >
                   {open === i ? (
-                    <Minus size={12} style={{ color: "#A855F7", filter: "drop-shadow(0 0 3px rgba(168,85,247,0.8))" }} />
+                    <Minus size={12} style={{ color: "#FF6B6B", filter: "drop-shadow(0 0 3px rgba(255,107,107,0.8))" }} />
                   ) : (
                     <Plus size={12} className="text-[#0A2540]" />
                   )}
