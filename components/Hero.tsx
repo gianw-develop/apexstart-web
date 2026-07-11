@@ -71,10 +71,9 @@ export default function Hero() {
               className="text-display mb-8"
               style={{ fontSize: "clamp(2.8rem, 6vw, 5.5rem)" }}
             >
-              Tu LLC + cuenta bancaria
+              Tu LLC en USA + Cuenta en USD
               <br />
-              en EE.UU. lista en{" "}
-              <span className="text-gradient">7 días.</span>
+              Lista en 7 días.
               <span className="hidden lg:inline-flex items-center align-top ml-3">
                 <Sparkles size={42} className="text-[#FF6B6B]" style={{ filter: "drop-shadow(0 0 10px rgba(255,107,107,0.55))" }} />
               </span>

@@ -49,9 +49,9 @@ export default function Footer() {
                 className="font-extrabold tracking-tight mb-4"
                 style={{ fontSize: "clamp(2rem, 4vw, 3rem)", lineHeight: 0.95 }}
               >
-                Tu LLC + cuenta bancaria
+                Tu LLC en USA + Cuenta en USD
                 <br />
-                en EE.UU. lista en 7 días.
+                Lista en 7 días.
                 <span className="hidden lg:inline-flex items-center align-top ml-3">
                   <Sparkles size={36} className="text-[#FF6B6B]" style={{ filter: "drop-shadow(0 0 10px rgba(255,107,107,0.55))" }} />
                 </span>
